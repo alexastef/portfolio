@@ -1,0 +1,9 @@
+.inline-link {
+    font-weight: 500;
+}
+
+.inline-link:hover {
+    text-decoration: none !important;
+    font-style: italic;
+    color: #D27C60
+}

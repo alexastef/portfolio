@@ -1,0 +1,15 @@
+.nav-link {
+    font-size: large;
+}
+
+.nav-link-active {
+    font-size: large;
+    font-style: italic;
+    font-weight: 500;
+}
+
+.nav-link:hover {
+    text-decoration: line-through;
+    font-weight: 500;
+    color: #D27C60
+}
