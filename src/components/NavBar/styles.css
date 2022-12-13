@@ -1,15 +1,21 @@
 .nav-link {
     font-size: large;
+    font-family: Archivo, sans-serif;
 }
 
 .nav-link-active {
-    font-size: large;
+    /*font-size: large;*/
+    font-family: 'Tenez', serif;
     font-style: italic;
-    font-weight: 500;
+    font-weight: 700;
+    font-size: larger;
+    letter-spacing: 0.05em;
 }
 
 .nav-link:hover {
-    text-decoration: line-through;
-    font-weight: 500;
-    color: #D27C60
+    font-family: 'Tenez', serif;
+    /*text-decoration: line-through;*/
+    font-weight: 700;
+    font-size: larger;
+    /*color: #D27C60*/
 }

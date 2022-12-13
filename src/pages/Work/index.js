@@ -1,7 +1,8 @@
 import React from 'react';
 import Page from "../../components/Page";
-import {Flex, Box, Text, Image, VStack, Heading, HStack, Grid, GridItem} from '@chakra-ui/react';
+import {Flex, Box, Text, Image, VStack, Heading, HStack, Grid, GridItem, IconButton, Icon} from '@chakra-ui/react';
 import pins from '../../images/hero.png';
+// import { FaCode, FaGlobe } from 'react-icons/fa';
 
 const Work = () => {
     const stackItemWidth = ["30%", "30%", "auto"];
@@ -19,7 +20,7 @@ const Work = () => {
                             I've also played an integral role in meeting business goals, including establishing our public API, writing and testing migration scripts to bring customers on our old app to our new app, shipping in-demand full stack features, improving
                             app performance, and building a Procore integration.
                         </Text>
-                        <HStack flexWrap={["wrap", "wrap", "nowrap"]} spacing={4} width="100%" justifyContent="space-between" textTransform="uppercase" fontWeight="500">
+                        <HStack flexWrap={["wrap", "wrap", "nowrap"]} spacing={4} width="100%" justifyContent="space-between" textStyle="mono">
                             <Text width={stackItemWidth}>React</Text>
                             <Text width={stackItemWidth}>Redux</Text>
                             <Text width={stackItemWidth}>React Query</Text>
@@ -33,23 +34,54 @@ const Work = () => {
 
             <Box mt="5rem">
                 <Heading size="xl" textAlign="center" pb={6}>PROJECTS + EXPERIENCE</Heading>
-                <Grid templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(4, 1fr)"]} gap={8} color="brand.light">
-                    <GridItem colSpan={1} background="brand.dark" height="200px">
-                        <Text>Trilogy Education</Text>
-                        <Text>Tutor</Text>
+                <Grid templateColumns={["repeat(1, 1fr)", "repeat(1, 1fr)", "repeat(2, 1fr)", "repeat(3, 1fr)"]} gap={8} color="brand.light">
+                    <GridItem colSpan={1} background="brand.dark" height="200px" p={4}>
+                        <Text textStyle="accentH4">Trilogy Education</Text>
+                        <Text textStyle="bodyLg">Tutor</Text>
                     </GridItem>
-                    <GridItem colSpan={1} background="brand.dark" height="200px">
-                        <Text>Goodnight Irene's</Text>
-                        <Text>Branding + Website</Text>
+                    <GridItem colSpan={1} background="brand.dark" height="200px" p={4}>
+                        <Flex direction="column" justifyContent="space-between">
+                            <Box>
+                                <Text textStyle="accentH4">Goodnight Irene's</Text>
+                                <Text textStyle="bodyLg">Branding + Website</Text>
+                            </Box>
+                            <Flex flexBasis="100%" justifyContent="flex-end">
+                                {/*<IconButton aria-label="code" icon={<Icon as={FaCode} />} />*/}
+                                {/*<IconButton aria-label="website" icon={<Icon as={FaGlobe} />} />*/}
+                            </Flex>
+                        </Flex>
                     </GridItem>
-                    <GridItem colSpan={1} background="brand.dark" height="200px">
-                        <Text>Evolve with Anna</Text>
-                        <Text>Branding, Website, + Fundraiser</Text>
+                    <GridItem colSpan={1} background="brand.dark" height="200px" p={4}>
+                        <Flex direction="column" justifyContent="space-between">
+                            <Box>
+                                <Text textStyle="accentH4">Evolve with Anna</Text>
+                                <Text textStyle="bodyLg">Branding, Website, + Fundraiser</Text>
+                            </Box>
+                            <Flex flexBasis="100%" justifyContent="flex-end">
+                                {/*<IconButton aria-label="code" icon={<Icon as={FaCode} />} />*/}
+                                {/*<IconButton aria-label="website" icon={<Icon as={FaGlobe} />} />*/}
+                            </Flex>
+                        </Flex>
+
                     </GridItem>
-                    <GridItem colSpan={1} background="brand.dark" height="200px">
-                        <Text>Other Skills???</Text>
-                        <Text>IDK</Text>
-                    </GridItem>
+                    {/*<GridItem colSpan={1} background="brand.dark" height="200px" p={4}>*/}
+                    {/*    <Flex direction="column" justifyContent="space-between">*/}
+                    {/*        <Box>*/}
+                    {/*            <Text textStyle="accentH4">Other Skills + Experience</Text>*/}
+                    {/*            <ul>*/}
+                    {/*                <li><Text textStyle="bodyLg">Code Review</Text></li>*/}
+                    {/*                <li><Text textStyle="bodyLg">Graphic Design</Text></li>*/}
+                    {/*                <li><Text textStyle="bodyLg">Canva</Text></li>*/}
+                    {/*                <li><Text textStyle="bodyLg">Sales</Text></li>*/}
+                    {/*            </ul>*/}
+
+                    {/*        </Box>*/}
+                    {/*        <Flex flexBasis="100%" justifyContent="flex-end">*/}
+                    {/*            /!*<IconButton aria-label="code" icon={<Icon as={FaCode} />} />*!/*/}
+                    {/*            /!*<IconButton aria-label="website" icon={<Icon as={FaGlobe} />} />*!/*/}
+                    {/*        </Flex>*/}
+                    {/*    </Flex>*/}
+                    {/*</GridItem>*/}
                 </Grid>
             </Box>
         </Page>
