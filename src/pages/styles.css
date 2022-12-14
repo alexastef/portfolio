@@ -3,12 +3,14 @@
     font-family: Archivo, sans-serif;
     font-style: normal;
     font-size: 1em;
+    border-bottom: 1px solid #ECE7E1;
 }
 
 .inline-link:hover {
     text-decoration: none !important;
-    font-family: 'Tenez', serif;
     font-style: italic;
-    /*font-family: Archivo, sans-serif;*/
-    /*color: #D27C60*/
+}
+
+.link-sm {
+    font-size: 0.9em;
 }

@@ -1,0 +1,106 @@
+{
+  "plugins": [ "react", "simple-import-sort"],
+  "extends": ["airbnb", "airbnb/hooks"],
+  "parser": "@babel/eslint-parser",
+  "parserOptions": {
+    "babelOptions": {
+      "presets": ["@babel/preset-react"]
+    },
+    "ecmaFeatures": {
+      "jsx": true,
+      "arrowFunctions": true,
+      "blockBindings": true,
+      "classes": true,
+      "defaultParams": true,
+      "destructuring": true,
+      "forOf": true,
+      "generators": false,
+      "modules": true,
+      "objectLiteralComputedProperties": true,
+      "objectLiteralDuplicateProperties": false,
+      "objectLiteralShorthandMethods": true,
+      "objectLiteralShorthandProperties": true,
+      "spread": true,
+      "superInFunctions": true,
+      "templateStrings": true,
+      "restParams": true
+    }
+  },
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true,
+    "jest": true
+  },
+  "rules": {
+    "max-len": [1, 180, 2],
+    "comma-dangle": ["error", "never"],
+    "no-nested-ternary": ["warn"],
+    "react/jsx-filename-extension": [0],
+    "import/no-unresolved": [0],
+    "import/no-extraneous-dependencies": [0],
+    "import/extensions": [0],
+    "array-callback-return": [0],
+    "no-param-reassign": [0],
+    "no-unused-expressions": [0],
+    "import/prefer-default-export": [0],
+    "arrow-parens": ["error", "as-needed"],
+    "react/forbid-prop-types": ["error", { "forbid": ["any"] }],
+    "react/function-component-definition": [2, { "namedComponents": "arrow-function", "unnamedComponents": "arrow-function" }],
+    "no-multiple-empty-lines": ["error", { "max": 1 }],
+    "object-curly-spacing": ["error", "always"],
+    "object-property-newline": ["error",  {
+      "allowAllPropertiesOnSameLine": true,
+      "allowMultiplePropertiesPerLine": false
+    }],
+    "padding-line-between-statements": [
+      "error",
+      { "blankLine": "always", "prev": "multiline-block-like", "next": "*" },
+      { "blankLine": "always", "prev": "return", "next": "*" },
+      { "blankLine": "always", "prev": "multiline-expression", "next": "*" },
+      { "blankLine": "always", "prev": "switch", "next": "*" }
+    ],
+    "object-curly-newline": ["error", {
+      "ObjectExpression": { "multiline": true },
+      "ImportDeclaration": { "multiline": true }
+    }],
+    "no-use-before-define": ["error", { "functions": false, "variables": false }],
+    "react-hooks/exhaustive-deps": "off",
+    "react/jsx-props-no-spreading": [0],
+    "react/no-children-prop": [0],
+    "simple-import-sort/exports": "error",
+    "react/require-default-props": [2, { "ignoreFunctionalComponents": true }],
+    "react/jsx-max-props-per-line": [1, { "maximum": 1, "when": "multiline" }],
+    "template-curly-spacing": "off",
+    "react/jsx-sort-props": [1, {
+      "callbacksLast": true,
+      "shorthandFirst": true,
+      "shorthandLast": true,
+      "ignoreCase": true
+    }],
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Node.js builtins. You could also generate this regex if you use a `.js` config.
+          // For example: `^(${require("module").builtinModules.join("|")})(/|$)`
+          [
+            "^(assert|buffer|child_process|cluster|console|constants|crypto|dgram|dns|domain|events|fs|http|https|module|net|os|path|punycode|querystring|readline|repl|stream|string_decoder|sys|timers|tls|tty|url|util|vm|zlib|freelist|v8|process|async_hooks|http2|perf_hooks)(/.*|$)",
+          ],
+          // Packages. `react` related packages come first.
+          ["^react", "^@?\\w"],
+          // Internal packages.
+          ["^(@|@company|@ui|components|utils|config|vendored-lib)(/.*|$)"],
+          // Side effect imports.
+          ["^\\u0000"],
+          // Parent imports. Put `..` last.
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Other relative imports. Put same-folder imports and `.` last.
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Style imports.
+          ["^.+\\.s?css$"]
+        ]
+      }
+    ]
+  }
+}

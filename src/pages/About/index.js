@@ -2,6 +2,7 @@ import React from 'react';
 import Page from "../../components/Page";
 import {Box, Heading, Text, Flex, VStack, Button, Image, Grid, GridItem} from "@chakra-ui/react";
 import me from '../../me.jpg';
+import me2 from '../../me2.png';
 
 const About = () => {
     return (
@@ -19,7 +20,7 @@ const About = () => {
                     <Heading as="h1" size="4xl" textAlign="right" pr="5rem">ABOUT</Heading>
                 </GridItem>
                 <GridItem rowSpan={1} colSpan={2}>
-                    <Image src={me} margin="0" mt="-3rem" width="100%" />
+                    <Image src={me2} margin="0" mt="-3rem" width="100%" />
                 </GridItem>
                 <GridItem rowSpan={2} colSpan={3}>
                                 <Text>

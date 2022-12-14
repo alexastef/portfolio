@@ -1,12 +1,13 @@
 import { extendTheme } from '@chakra-ui/react';
-import colors from "./foundation/colors";
+
+import colors from './foundation/colors';
 import fonts from './foundation/fonts';
 import textStyles from './foundation/textStyles';
 
 const themeOverrides = {
-    colors,
-    fonts,
-    textStyles
+  colors,
+  fonts,
+  textStyles
 };
 
 const theme = extendTheme(themeOverrides);
