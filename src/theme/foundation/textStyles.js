@@ -2,7 +2,7 @@ const textStyles = {
   h2: {
     fontFamily: 'Tenez',
     fontWeight: 400,
-    fontSize: '48px'
+    fontSize: '2em'
   },
   p: { fontFamily: 'Cutive Mono' },
   accent: { fontFamily: 'Tenez' },

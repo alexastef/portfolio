@@ -19,10 +19,9 @@ const GridSquare = ({ title, role, websiteUrl, repoUrl, isFirst, isLast, stack }
       color={colors.brand.dark}
       colSpan={1}
       display="flex"
+      flexDirection={['column', 'column', 'row', 'column']}
       height={['200px', '200px', '150px', '200px']}
       justifyContent="space-between"
-      flexDirection={['column', 'column', 'row', 'column']}
-      // height="auto"
       p={5}
     >
       <Box>
@@ -31,8 +30,8 @@ const GridSquare = ({ title, role, websiteUrl, repoUrl, isFirst, isLast, stack }
         {/* {stack.map(item => <Text key={item} textStyle="mono">{item}</Text>)} */}
       </Box>
       <Flex alignItems="flex-end" justifyContent="flex-end">
-        {repoUrl && <IconButton aria-label="code" icon={<Icon as={BsCode} />} variant="outline" />}
-        {websiteUrl && <IconButton aria-label="website" icon={<Icon as={BsGlobe} />} variant="outline" />}
+        {repoUrl && <IconButton aria-label="code" icon={<Icon as={BsCode} />} size="lg" variant="text" />}
+        {websiteUrl && <IconButton aria-label="website" icon={<Icon as={BsGlobe} />} size="lg" variant="text" />}
       </Flex>
     </GridItem>
   );

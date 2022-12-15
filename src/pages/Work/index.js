@@ -1,5 +1,5 @@
 import React from 'react';
-import { Box, Flex, Grid, GridItem, Heading, HStack, Icon, IconButton, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Grid, Heading, Image, Text, VStack } from '@chakra-ui/react';
 
 import Page from '../../components/Page';
 import pins from '../../images/hero.png';
@@ -19,28 +19,18 @@ const Work = () => (
       <VStack alignItems="flex-start" spacing={4} width={['85%', '85%', '85%', '50%']}>
         <Heading size="2xl">PINS</Heading>
         <Text>PINS is a risk management software. We serve a range of industries, simplifying and automating the way companies request, track, and manage insurance certificates.</Text>
-        <Text>
-          During my time at PINS, I've led Front End Engineering initiatives like co-creating and implementing a design system, creating a component library, and transitioning our app from Redux to React Query.
-          I've also played an integral role in meeting business goals, including establishing our public API, writing and testing migration scripts to bring customers on our old app to our new app, shipping in-demand full stack features, improving
+        <Text mb={8}>
+          During my time at PINS, I&apos;ve led Front End Engineering initiatives like co-creating and implementing a design system, creating a component library, and transitioning our app from Redux to React Query.
+          I&apos;ve also played an integral role in meeting business goals, including establishing our public API, writing and testing migration scripts to bring customers on our old app to our new app, shipping in-demand full stack features, improving
           app performance, and building a Procore integration.
         </Text>
         <Box
           borderBottom={`1px solid ${colors.brand.dark}`}
           borderTop={`1px solid ${colors.brand.dark}`}
           className="slider"
-          mt={2}
           width="100%"
         >
-          {/* <HStack */}
-          {/*    // flexWrap={["wrap", "wrap", "nowrap"]} */}
-          {/*    spacing={4} */}
-          {/*    // width="100%" */}
-          {/*    justifyContent="space-between" */}
-          {/*    textStyle="mono" */}
-          {/*    className="slider-row" */}
-          {/*    py={1} */}
-          {/* > */}
-          <Box className="slider-row" textStyle="mono">
+          <Box className="slider-row" py={2} textStyle="mono">
             <Text className="slider-text">React</Text>
             <Text className="slider-text">Redux</Text>
             <Text className="slider-text">React Query</Text>
@@ -49,8 +39,6 @@ const Work = () => (
             <Text className="slider-text">AWS</Text>
             <Text className="slider-text">Figma</Text>
           </Box>
-
-          {/* </HStack> */}
         </Box>
       </VStack>
     </Flex>
