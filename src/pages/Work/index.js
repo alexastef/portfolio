@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useRef } from 'react';
 import { Transition } from 'react-transition-group';
 import { Box, Flex, Grid, Heading, Image, Text, VStack } from '@chakra-ui/react';
 

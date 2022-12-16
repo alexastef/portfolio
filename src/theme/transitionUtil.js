@@ -1,21 +1,16 @@
 export const defaultStyle = { opacity: 0 };
 
 /* ----- Slide down ----- */
-// TODO: add cooler effect or make sharper (https://css-tricks.com/using-multi-step-animations-transitions/)
-export const slideDownTransitionStyles = translate => {
-  const translateNumber = parseInt(translate, 10);
-  const duration = translateNumber * 0.008;
-  return {
-    entering: { opacity: 0, transform: `translateY(-${translate}%)` },
-    entered: {
-      opacity: 1,
-      transform: 'translateY(0)',
-      transition: 'opacity 0.7s, transform linear 0.4s'
-    },
-    exiting: { transform: 'translateY(0)' },
-    exited: { transform: 'translateY(100%)', transition: 'transform linear 4s' }
-  };
-};
+export const slideDownTransitionStyles = translate => ({
+  entering: { opacity: 0, transform: `translateY(-${translate}%)` },
+  entered: {
+    opacity: 1,
+    transform: 'translateY(0)',
+    transition: 'opacity 0.7s, transform linear 0.4s'
+  },
+  exiting: { transform: 'translateY(0)' },
+  exited: { transform: 'translateY(100%)', transition: 'transform linear 4s' }
+});
 
 export const slideDownDelayedStyles = delay => ({ entered: { ...slideDownTransitionStyles.entered, transitionDelay: delay } });
 

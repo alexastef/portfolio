@@ -23,7 +23,7 @@ const Root = () => {
           setShowNav(false);
         }}
         onEntering={async () => {
-          await new Promise(res => setTimeout(res, 600));
+          await new Promise(res => setTimeout(res, 700));
           setShowNav(true);
         }}
       >
