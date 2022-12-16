@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 
 import colors from '../../../theme/foundation/colors';
 
-const GridSquare = ({ title, role, websiteUrl, repoUrl, isFirst, isLast, stack }) => {
+const GridSquare = ({ title, role, websiteUrl, repoUrl, isFirst, isLast }) => {
   const gridBorder = `1px solid ${colors.brand.dark}`;
   const borderBottom = isLast ? gridBorder : ['none', 'none', 'none', gridBorder];
   const borderLeft = isFirst ? gridBorder : [gridBorder, gridBorder, gridBorder, 'none'];

@@ -2,7 +2,7 @@ import React from 'react';
 import { useLocation, useOutlet } from 'react-router-dom';
 import { CSSTransition, SwitchTransition } from 'react-transition-group';
 
-import { routes } from '../../App';
+import { routes } from '../../routes';
 import useStore from '../../stores';
 
 const Root = () => {
@@ -27,7 +27,7 @@ const Root = () => {
           setShowNav(true);
         }}
       >
-        {state => (
+        {() => (
           <div className="page" ref={nodeRef}>
             {currentOutlet}
           </div>

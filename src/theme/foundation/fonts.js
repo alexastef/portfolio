@@ -1,7 +1,6 @@
-
 const fonts = {
-    heading: 'Archivo',
-    body: 'Archivo'
+  heading: 'Archivo',
+  body: 'Archivo'
 };
 
 export default fonts;

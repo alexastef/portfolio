@@ -3,36 +3,10 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import { ChakraProvider } from '@chakra-ui/react';
 
 import Root from './components/Root';
-import About from './pages/About';
-import Contact from './pages/Contact';
-import Main from './pages/Main';
-import Work from './pages/Work';
+import { routes } from './routes';
 import theme from './theme';
 
 import './App.css';
-
-export const routes = [
-  {
-    path: '/',
-    element: <Main />,
-    nodeRef: createRef()
-  },
-  {
-    path: '/work',
-    element: <Work />,
-    nodeRef: createRef()
-  },
-  {
-    path: '/about',
-    element: <About />,
-    nodeRef: createRef()
-  },
-  {
-    path: '/contact',
-    element: <Contact />,
-    nodeRef: createRef()
-  }
-];
 
 const router = createBrowserRouter([
   {

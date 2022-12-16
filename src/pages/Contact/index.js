@@ -4,7 +4,7 @@ import { Flex, Heading, HStack, Link, Text } from '@chakra-ui/react';
 
 import Page from '../../components/Page';
 import useStore from '../../stores';
-import { defaultStyle, slideDownTransitionStyles, slideUpTransitionStyles } from '../../theme/transitionUtil';
+import { defaultStyle, slideDownTransitionStyles } from '../../theme/transitionUtil';
 
 const Contact = () => {
   const { showNav } = useStore();
