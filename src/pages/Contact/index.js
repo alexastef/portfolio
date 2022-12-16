@@ -30,9 +30,9 @@ const Contact = () => {
         >
           <Text>alexa.c.stef@gmail.com</Text>
           <HStack>
-            <Link className="inline-link link-sm" href="https://www.linkedin.com/in/alexastef/">LinkedIn</Link>
+            <Link _target="black" className="inline-link link-sm" href="https://www.linkedin.com/in/alexastef/" rel="noopner noreferrer">LinkedIn</Link>
             <Text>/</Text>
-            <Link className="inline-link link-sm" href="https://github.com/alexastef">GitHub</Link>
+            <Link _target="black" className="inline-link link-sm" href="https://github.com/alexastef" rel="noopner noreferrer">GitHub</Link>
           </HStack>
         </Flex>
         <Flex flexBasis="50%" justifyContent={['flex-end', 'flex-end', 'flex-end', '']} overflowY="hidden" textAlign="right">
