@@ -17,8 +17,6 @@ const About = () => {
 
   useEffect(() => () => setShowHeading(false), []);
 
-  const delay = (res, ms = 300) => setTimeout(res, ms);
-
   return (
     <Page colorScheme="light">
       <Flex alignItems="center" height={['100%', '100%', '80%']} justifyContent="center" minHeight="inherit" pt="3rem">
@@ -105,10 +103,7 @@ const About = () => {
                 in={showNav}
                 nodeRef={imageRef}
                 timeout={500}
-                onEntered={async () => {
-                  await new Promise(res => delay(res, 501));
-                  setShowHeading(true);
-                }}
+                onEntered={() => setTimeout(() => setShowHeading(true), 501)}
               >
                 {state => (
                   <Image

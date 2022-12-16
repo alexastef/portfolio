@@ -43,8 +43,8 @@ GridSquare.propTypes = {
   websiteUrl: PropTypes.string,
   repoUrl: PropTypes.string,
   isFirst: PropTypes.bool,
-  isLast: PropTypes.bool,
-  stack: PropTypes.arrayOf(PropTypes.string)
+  isLast: PropTypes.bool
+  // stack: PropTypes.arrayOf(PropTypes.string)
 };
 
 export default GridSquare;

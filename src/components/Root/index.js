@@ -22,10 +22,7 @@ const Root = () => {
         onEnter={() => {
           setShowNav(false);
         }}
-        onEntering={async () => {
-          await new Promise(res => setTimeout(res, 700));
-          setShowNav(true);
-        }}
+        onEntering={() => setTimeout(() => setShowNav(true), 701)}
       >
         {() => (
           <div className="page" ref={nodeRef}>

@@ -49,48 +49,48 @@ const generateSolidHoverStyle = colorScheme => ({
   }
 });
 
-const generateTextHoverStyle = colorScheme => ({
-  position: 'relative',
-  color: 'orange',
-  borderRadius: '2px',
-  transition: 'all 500ms cubic-bezier(0.77, 0, 0.175, 1)',
-  _before: {
-    content: '""',
-    position: 'absolute',
-    transition: 'all 500ms cubic-bezier(0.77, 0, 0.175, 1)',
-    zIndex: '-1',
-    top: '0',
-    width: '0',
-    height: '100%',
-    left: '0',
-    border: '1px solid red',
-    borderLeft: 0,
-    borderRight: 0
-  },
-  _after: {
-    content: '""',
-    position: 'absolute',
-    transition: 'all 500ms cubic-bezier(0.77, 0, 0.175, 1)',
-    zIndex: '-1',
-    top: '0',
-    width: '0',
-    height: '100%',
-    right: '0'
-  },
-  _hover: {
-    color: 'purple',
-    transitionDelay: '0.5s',
-    _before: {
-      transitionDelay: '0s',
-      width: '100%'
-    },
-    _after: {
-      background: 'lightblue',
-      transitionDelay: '0.35s',
-      width: '100%'
-    }
-  }
-});
+// const generateTextHoverStyle = colorScheme => ({
+//   position: 'relative',
+//   color: 'orange',
+//   borderRadius: '2px',
+//   transition: 'all 500ms cubic-bezier(0.77, 0, 0.175, 1)',
+//   _before: {
+//     content: '""',
+//     position: 'absolute',
+//     transition: 'all 500ms cubic-bezier(0.77, 0, 0.175, 1)',
+//     zIndex: '-1',
+//     top: '0',
+//     width: '0',
+//     height: '100%',
+//     left: '0',
+//     border: '1px solid red',
+//     borderLeft: 0,
+//     borderRight: 0
+//   },
+//   _after: {
+//     content: '""',
+//     position: 'absolute',
+//     transition: 'all 500ms cubic-bezier(0.77, 0, 0.175, 1)',
+//     zIndex: '-1',
+//     top: '0',
+//     width: '0',
+//     height: '100%',
+//     right: '0'
+//   },
+//   _hover: {
+//     color: 'purple',
+//     transitionDelay: '0.5s',
+//     _before: {
+//       transitionDelay: '0s',
+//       width: '100%'
+//     },
+//     _after: {
+//       background: 'lightblue',
+//       transitionDelay: '0.35s',
+//       width: '100%'
+//     }
+//   }
+// });
 
 const baseStyle = defineStyle({
   fontFamily: 'Cutive Mono',
