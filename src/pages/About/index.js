@@ -1,17 +1,25 @@
-import React from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { Transition } from 'react-transition-group';
 import { Button, Flex, Grid, GridItem, Heading, Image, Text, VStack } from '@chakra-ui/react';
 
 import Page from '../../components/Page';
 import newestMe from '../../new-me.png';
+import useStore from '../../stores';
+import { breatheInTransitionStyles, defaultStyle, slideUpDelayedStyles, slideUpTransitionStyles } from '../../theme/transitionUtil';
 
 const About = () => {
+  const [showHeading, setShowHeading] = useState(false);
   const navigate = useNavigate();
+  const { showNav } = useStore();
+  const imageRef = useRef();
+  const headingRef = useRef();
+
+  useEffect(() => () => setShowHeading(false), []);
 
   return (
     <Page colorScheme="light">
-
-      <Flex alignItems="center" height={['100%', '100%', '80%']} justifyContent="center" minHeight="inherit" pt="5rem">
+      <Flex alignItems="center" height={['100%', '100%', '80%']} justifyContent="center" minHeight="inherit" pt="3rem">
         <Flex alignItems="flex-end" direction={['column-reverse', 'column-reverse', 'column-reverse', 'row']} height="70%">
 
           <Grid position="relative" templateColumns="repeat(5, 1fr)">
@@ -22,15 +30,30 @@ const About = () => {
               gridRow={['1 / span 2', '1 / span 2', '1']}
               justifyContent={['flex-end', 'flex-end', 'flex-start']}
               mt="-2%"
+              overflow="hidden"
               zIndex={10}
             >
-              <Heading
-                as="h1"
-                fontSize={['3rem', '4rem', '5rem', '6rem', '8rem']}
-                textAlign={['center', 'center', 'left', 'center']}
+              <Transition
+                appear={showHeading}
+                in={showHeading}
+                nodeRef={headingRef}
+                timeout={500}
               >
-                ABOUT
-              </Heading>
+                {state => (
+                  <Heading
+                    as="h1"
+                    fontSize={['3rem', '4rem', '5rem', '6rem', '8rem']}
+                    style={{
+                      ...defaultStyle,
+                      ...slideUpTransitionStyles('50')[state],
+                      ...slideUpDelayedStyles('500ms')
+                    }}
+                    textAlign={['center', 'center', 'left', 'center']}
+                  >
+                    ABOUT
+                  </Heading>
+                )}
+              </Transition>
             </GridItem>
             <GridItem
               display="flex"
@@ -56,7 +79,7 @@ const About = () => {
                     graphic design, cooking, British TV, natural wine, live music.
                   </Text>
                 </VStack>
-                <Flex flexWrap="wrap" justifyContent="space-between" margin="auto" width="100%">
+                <Flex display={showNav ? 'flex' : 'none'} flexWrap="wrap" justifyContent="space-between" margin="auto" width="100%">
                   <Button
                     my={4}
                     width={['100%', '100%', '100%', '100%', '47%']}
@@ -75,7 +98,28 @@ const About = () => {
               </Flex>
             </GridItem>
             <GridItem gridColumn={['2 / span 3', '2 / span 3', '4 / -1']} gridRow="1 / span 2">
-              <Image marginLeft={['auto', 'auto', 'auto', 'auto', 0]} mt={['', '', '', '2rem']} src={newestMe} />
+              <Transition
+                appear={showNav}
+                in={showNav}
+                nodeRef={imageRef}
+                timeout={500}
+                onEntered={async () => {
+                  await new Promise(res => setTimeout(res, 501));
+                  setShowHeading(true);
+                }}
+              >
+                {state => (
+                  <Image
+                    marginLeft={['auto', 'auto', 'auto', 'auto', 0]}
+                    mt={['', '', '', '2rem']}
+                    src={newestMe}
+                    style={{
+                      transform: 'scale(0)',
+                      ...breatheInTransitionStyles[state]
+                    }}
+                  />
+                )}
+              </Transition>
             </GridItem>
           </Grid>
         </Flex>
@@ -83,5 +127,8 @@ const About = () => {
     </Page>
   );
 };
+
+// maybe add this
+/* boxShadow="2px 10px 20px 1px rgb(0 0 0 / 10%)" */
 
 export default About;

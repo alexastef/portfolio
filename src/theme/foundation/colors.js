@@ -2,22 +2,14 @@ const colors = {
   brand: {
     dark: '#353535',
     light: '#ece7e1'
-    // TODO: accent
-    // accent: ''
-    // light: '#D1D3C9'
-    // light: '#DBCCAB'
   },
   colorSchemes: {
     dark: {
       background: '#353535',
-      // text: '#DBCCAB'
-      // text: '#D1D3C9'
       text: '#ece7e1'
     },
     light: {
-      // background: '#F6F5EC',    // winner so far, also like #FCF3E9, #f3eeea
       background: '#ece7e1',
-      // background: '#D1D3C9',
       text: '#353535'
     }
   },

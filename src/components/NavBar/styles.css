@@ -4,7 +4,7 @@
 }
 
 .nav-link-active {
-    font-size: x-large;
+    font-size: large;
     font-family: 'Tenez', serif;
     font-style: italic;
     font-weight: 500;
@@ -12,7 +12,10 @@
 }
 
 .nav-link:hover {
-    font-size: larger;
+    /*font-size: larger;*/
+    text-decoration: underline;
+    text-decoration-color: inherit;
+    transition: text-decoration-color 1s;
     font-style: italic;
     /*font-family: 'Tenez', serif;*/
     /*text-decoration: line-through;*/

@@ -1,48 +1,58 @@
-import React from 'react';
-import { ChakraProvider } from "@chakra-ui/react";
-import theme from "./theme";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
-import Main from './pages/Main'
-import Work from './pages/Work';
-import NavBar from "./components/NavBar";
-import Contact from "./pages/Contact";
-import About from "./pages/About";
+import React, { createRef } from 'react';
+import { createBrowserRouter, RouterProvider } from 'react-router-dom';
+import { ChakraProvider } from '@chakra-ui/react';
 
-const router = createBrowserRouter([
+import Root from './components/Root';
+import About from './pages/About';
+import Contact from './pages/Contact';
+import Main from './pages/Main';
+import Work from './pages/Work';
+import theme from './theme';
+
+import './App.css';
+
+export const routes = [
   {
-    path: "/",
-    element: <Main />
+    path: '/',
+    element: <Main />,
+    nodeRef: createRef()
   },
   {
-    path: "/work",
-    element: <Work />
+    path: '/work',
+    element: <Work />,
+    nodeRef: createRef()
   },
   {
-    path: "/about",
-    element: <About />
+    path: '/about',
+    element: <About />,
+    nodeRef: createRef()
   },
   {
     path: '/contact',
-    element: <Contact />
+    element: <Contact />,
+    nodeRef: createRef()
   }
-])
+];
 
-const App = () => {
-  return (
-    <div className="App">
+const router = createBrowserRouter([
+  {
+    path: '/',
+    element: <Root />,
+    children: routes.map(route => ({
+      index: route.path === '/',
+      path: route.path === '/' ? undefined : route.path,
+      element: route.element
+    }))
+  }
+]);
+
+const App = () => (
+
+  <div className="App">
     <ChakraProvider theme={theme}>
       <RouterProvider router={router} />
-      {/*<Router>*/}
-
-      {/*<Routes>*/}
-      {/*  <Route exact path="/" component={Main} />*/}
-      {/*  <Route exact path="/work" component={Work} />*/}
-      {/*</Routes>*/}
-      {/*</Router>*/}
-      {/*<Main />*/}
     </ChakraProvider>
-    </div>
-  );
-}
+  </div>
+);
 
 export default App;

@@ -2,11 +2,13 @@ import React from 'react';
 import { Box } from '@chakra-ui/react';
 import PropTypes from 'prop-types';
 
+import useStore from '../../stores';
 import colors from '../../theme/foundation/colors';
 import NavBar from '../NavBar';
 
 const Page = ({ colorScheme, children }) => {
   const pageColors = colors.colorSchemes[colorScheme];
+  const { showNav } = useStore();
 
   return (
     <Box
@@ -18,7 +20,7 @@ const Page = ({ colorScheme, children }) => {
       width="100%"
     >
       <NavBar />
-      <Box height="auto" minHeight={['80vh', '80vh', '70vh']}>
+      <Box color={showNav ? 'inherit' : 'transparent'} height="auto" minHeight={['80vh', '80vh', '70vh']}>
         {children}
       </Box>
     </Box>
