@@ -41,11 +41,15 @@ const Work = () => {
         </Flex>
         <VStack alignItems="flex-start" spacing={4} width={['85%', '85%', '85%', '50%']}>
           <Heading size="2xl">PINS</Heading>
-          <Text>PINS is a risk management software. We serve a range of industries, simplifying and automating the way companies request, track, and manage insurance certificates.</Text>
+          <Text>
+            PINS is a risk management software. We serve a range of industries, simplifying and automating the way companies request,
+            track, and manage insurance certificates.
+          </Text>
           <Text mb={8}>
-            During my time at PINS, I&apos;ve led Front End Engineering initiatives like co-creating and implementing a design system, creating a component library, and transitioning our app from Redux to React Query.
-            I&apos;ve also played an integral role in meeting business goals, including establishing our public API, writing and testing migration scripts to bring customers on our old app to our new app, shipping in-demand full stack features, improving
-            app performance, and building a Procore integration.
+            During my time at PINS, I&apos;ve led Front End Engineering initiatives like co-creating and implementing a design system, creating a component library,
+            and transitioning our app from Redux to React Query.
+            I&apos;ve also played an integral role in meeting business goals, including establishing our public API, writing and testing migration scripts to
+            bring customers on our old app to our new app, shipping in-demand full stack features, improving app performance, and building a Procore integration.
           </Text>
           <Box
             borderBottom={border}
