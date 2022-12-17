@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
-import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, GridItem, Heading, Image, Text, VStack } from '@chakra-ui/react';
 
 import Resume from '../../assets/resume.pdf';
 import Page from '../../components/Page';
