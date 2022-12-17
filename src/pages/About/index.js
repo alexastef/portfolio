@@ -1,8 +1,9 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
-import { Button, Flex, Grid, GridItem, Heading, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link, Text, VStack } from '@chakra-ui/react';
 
+import Resume from '../../assets/resume.pdf';
 import Page from '../../components/Page';
 import newestMe from '../../new-me.png';
 import useStore from '../../stores';
@@ -87,13 +88,24 @@ const About = () => {
                   >
                     Contact
                   </Button>
-                  <Button
+                  <Box
                     my={4}
                     width={['100%', '100%', '100%', '100%', '47%']}
-                    onClick={() => console.log('link to or download resume')}
                   >
-                    Resume
-                  </Button>
+                    <a
+                      href={Resume}
+                      rel="noreferrer"
+                      style={{ width: '100%' }}
+                      target="_blank"
+                    >
+                      <Button
+                        textDecoration="none"
+                        width="100%"
+                      >
+                        Resume
+                      </Button>
+                    </a>
+                  </Box>
                 </Flex>
               </Flex>
             </GridItem>

@@ -2,8 +2,8 @@ import React, { useRef } from 'react';
 import { Transition } from 'react-transition-group';
 import { Box, Flex, Grid, Heading, Image, Text, VStack } from '@chakra-ui/react';
 
+import pins from '../../assets/hero.png';
 import Page from '../../components/Page';
-import pins from '../../images/hero.png';
 import useStore from '../../stores';
 import colors from '../../theme/foundation/colors';
 import { breatheInTransitionStyles } from '../../theme/transitionUtil';
