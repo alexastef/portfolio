@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
 import { Box, Button, Flex, Grid, GridItem, Heading, Image, Text, VStack } from '@chakra-ui/react';
 
-import Resume from '../../assets/resume.pdf';
+import Resume from '../../assets/resume_web.pdf';
 import Page from '../../components/Page';
 import newestMe from '../../new-me.png';
 import useStore from '../../stores';

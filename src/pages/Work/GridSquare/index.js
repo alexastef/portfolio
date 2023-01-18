@@ -30,8 +30,8 @@ const GridSquare = ({ title, role, websiteUrl, repoUrl, isFirst, isLast }) => {
         {/* {stack.map(item => <Text key={item} textStyle="mono">{item}</Text>)} */}
       </Box>
       <Flex alignItems="flex-end" justifyContent="flex-end">
-        {repoUrl && <IconButton aria-label="code" icon={<Icon as={BsCode} />} size="lg" variant="text" />}
-        {websiteUrl && <IconButton aria-label="website" icon={<Icon as={BsGlobe} />} size="lg" variant="text" />}
+        {repoUrl && <a href={repoUrl} rel="noreferrer" target="_blank"><IconButton aria-label="code" icon={<Icon as={BsCode} />} size="lg" variant="text" /></a>}
+        {websiteUrl && <a href={websiteUrl} rel="noreferrer" target="_blank"><IconButton aria-label="website" icon={<Icon as={BsGlobe} />} size="lg" variant="text" /></a>}
       </Flex>
     </GridItem>
   );

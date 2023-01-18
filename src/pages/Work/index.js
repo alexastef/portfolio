@@ -1,6 +1,7 @@
 import React, { useRef } from 'react';
+import { BsGlobe } from 'react-icons/bs';
 import { Transition } from 'react-transition-group';
-import { Box, Flex, Grid, Heading, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, Flex, Grid, Heading, HStack, Icon, IconButton, Image, Text, VStack } from '@chakra-ui/react';
 
 import pins from '../../assets/hero.png';
 import Page from '../../components/Page';
@@ -40,15 +41,20 @@ const Work = () => {
           </Transition>
         </Flex>
         <VStack alignItems="flex-start" spacing={4} width={['85%', '85%', '85%', '50%']}>
-          <Heading size="2xl">PINS</Heading>
+          <HStack>
+            <Heading size="2xl">PINS</Heading>
+            <a href="https://www.pinsadvantage.com/" rel="noreferrer" target="_blank">
+              <IconButton aria-label="website" icon={<Icon as={BsGlobe} boxSize={6} />} size="lg" variant="text" />
+            </a>
+          </HStack>
           <Text>
-            PINS is a risk management software. We serve a range of industries, simplifying and automating the way companies request,
+            PINS is a risk management software serving a range of industries. It simplifies and automates the way companies request,
             track, and manage insurance certificates.
           </Text>
           <Text mb={8}>
-            During my time at PINS, I&apos;ve led Front End Engineering initiatives like co-creating and implementing a design system, creating a component library,
+            During my time at PINS, I led Front End Engineering initiatives like co-creating and implementing a design system, creating a component library,
             and transitioning our app from Redux to React Query.
-            I&apos;ve also played an integral role in meeting business goals, including establishing our public API, writing and testing migration scripts to
+            I also played an integral role in meeting business goals, including establishing our public API, writing and testing migration scripts to
             bring customers on our old app to our new app, shipping in-demand full stack features, improving app performance, and building a Procore integration.
           </Text>
           <Box

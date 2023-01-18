@@ -1,6 +1,6 @@
 import React, { useRef } from 'react';
 import { Transition } from 'react-transition-group';
-import { Flex, Grid, GridItem, Heading, Link, Text } from '@chakra-ui/react';
+import { Flex, Grid, GridItem, Heading } from '@chakra-ui/react';
 
 import Page from '../../components/Page';
 import useStore from '../../stores';
@@ -63,32 +63,6 @@ const Main = () => {
                     I&apos;m Alexa, a product-focused Software Engineer based in San Diego. From design to deployment, I love every step in the process
                     of bringing ideas to life.
                   </Heading>
-                );
-              }}
-            </Transition>
-          </GridItem>
-          <GridItem colSpan={1} overflow="hidden" rowSpan={1}>
-            <Transition
-              appear={showNav}
-              in={showNav}
-              nodeRef={nodeRef}
-              timeout={4000}
-            >
-              {state => {
-                const transitionDelay = slideDownDelayedStyles('500ms');
-                return (
-                  <Text
-                    style={{
-                      ...defaultStyle,
-                      ...slideDownTransitionStyles('40')[state],
-                      ...transitionDelay[state]
-                    }}
-                    textStyle={['accentH5', 'accentH5', 'accentH3']}
-                  >
-                    Currently developing at
-                    {' '}
-                    <Link className="inline-link" href="https://www.pinsadvantage.com/">PINS</Link>
-                  </Text>
                 );
               }}
             </Transition>
