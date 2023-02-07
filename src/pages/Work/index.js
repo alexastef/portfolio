@@ -78,7 +78,7 @@ const Work = () => {
 
       <Box display={showNav ? 'block' : 'none'} mt="6rem">
         <Heading pb={6} size="xl" textAlign="center">PROJECTS + EXPERIENCE</Heading>
-        <Grid color="brand.light" templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(3, 1fr)']}>
+        <Grid color="brand.light" templateColumns={['repeat(1, 1fr)', 'repeat(1, 1fr)', 'repeat(1, 1fr)', `repeat(${experience.length}, 1fr)`]}>
           {experience.map((item, idx) => (
             <GridSquare
               isFirst={idx === 0}

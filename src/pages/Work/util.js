@@ -14,6 +14,19 @@ export const experience = [
     ]
   },
   {
+    company: 'Mente Operandi',
+    role: 'Branding, Website, SEO',
+    websiteUrl: 'https://menteoperandi.com',
+    repoUrl: '',
+    stack: [
+      'NextJS',
+      'React',
+      'Framer Motion',
+      'Vercel',
+      'Adobe Illustrator'
+    ]
+  },
+  {
     company: 'Goodnight Irene\'s',
     role: 'Branding + Website',
     websiteUrl: 'http://www.goodnight-irenes.com/',
@@ -27,7 +40,7 @@ export const experience = [
   },
   {
     company: 'Evolve with Anna',
-    role: 'Branding, Website, + Fundraiser',
+    role: 'Branding, Website, Fundraiser',
     websiteUrl: '',
     repoUrl: 'https://github.com/alexastef/evolvewithanna',
     stack: [
