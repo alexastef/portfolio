@@ -44,7 +44,7 @@ const Work = () => {
           <HStack>
             <Heading size="2xl">PINS</Heading>
             <a href="https://www.pinsadvantage.com/" rel="noreferrer" target="_blank">
-              <IconButton aria-label="website" icon={<Icon as={BsGlobe} boxSize={6} />} size="lg" variant="text" />
+              <IconButton aria-label="website" display={showNav ? 'block' : 'none'} icon={<Icon as={BsGlobe} boxSize={6} />} size="lg" variant="text" />
             </a>
           </HStack>
           <Text>

@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { Transition } from 'react-transition-group';
-import { Box, Button, Flex, Grid, GridItem, Heading, Image, Text, VStack } from '@chakra-ui/react';
+import { Box, Button, Flex, Grid, GridItem, Heading, Image, Link, Text, VStack } from '@chakra-ui/react';
 
 import Resume from '../../assets/resume_web.pdf';
 import Page from '../../components/Page';
@@ -63,24 +63,34 @@ const About = () => {
               justifyContent={['normal', 'normal', 'flex-end']}
             >
               <Flex flexDirection="column" p={['1rem']} pr={['', '', '4rem']} width={['100%', '100%', '100%', '80%']}>
-                <VStack spacing={2}>
+                <VStack spacing={3}>
                   <Text>
-                    I absolutely love building software. Writing code is the perfect balance of art and logic; I bring ideas to life and solve real-world puzzles every day.
-                    When I was younger I felt torn, like I could only be creative or practical, right brain or left brain. Engineering
-                    made me realize you can be both. Engineering is the second iteration of my career, branding was the first.
+                    I absolutely love building software. Writing code is the perfect balance of art and math. It allows me to express myself creatively and forces me to think
+                    critically. Bringing ideas to life and solving real problems stimulates every part of my brain.
                   </Text>
 
                   <Text>
-                    I bring my expertise in design to every component I build and class I write. I&apos;m extremely self-motivated, collaborative, and curious.
-                    Whether it&apos;s a new technology or complex feature, I approach all challenges creatively and meticulously.
+                    This is the second iteration of my career, branding was the first. I apply my expertise in design to every component I build and class I write.
+                    I&apos;m extremely self-motivated, collaborative, and curious. Whether it&apos;s a new technology or complex feature,
+                    I approach all challenges creatively and meticulously.
                   </Text>
 
                   <Text>
-                    There are a few things besides coding that I love too: pottery, dining out and new restaurants, beach walks, crossword puzzles,
-                    graphic design, cooking, British TV, natural wine, live music.
+                    There are a few things besides coding that I love too: pottery, dining out and new restaurants, beach walks,
+                    volunteering with
+                    {' '}
+                    <Link _target="blank" className={`inline-link link-md ${showNav ? '' : 'hide'}`} href="https://sandiego350.org/" rel="noopner noreferrer">SD350</Link>
+                    {' '}
+
+                    and
+
+                    {' '}
+                    <Link _target="blank" className={`inline-link link-md ${showNav ? '' : 'hide'}`} href="https://www.surfrider.org//" rel="noopner noreferrer">Surfrider</Link>
+                    ,
+                    crossword puzzles, graphic design, cooking, British TV, natural wine, live music.
                   </Text>
                 </VStack>
-                <Flex display={showNav ? 'flex' : 'none'} flexWrap="wrap" justifyContent="space-between" margin="auto" width="100%">
+                <Flex display={showNav ? 'flex' : 'none'} flexWrap="wrap" justifyContent="space-between" margin="auto" mt={4} width="100%">
                   <Button
                     my={4}
                     width={['100%', '100%', '100%', '100%', '47%']}

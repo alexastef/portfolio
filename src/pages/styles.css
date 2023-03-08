@@ -14,3 +14,12 @@
 .link-sm {
     font-size: 0.9em;
 }
+
+.link-md {
+    font-size: 1em;
+    border-bottom: 1px solid #1A1A1A;
+}
+
+.hide {
+    display: none;
+}
